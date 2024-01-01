@@ -22,7 +22,7 @@ export interface Author {
   {
     books.library.map(({ book: { title, cover, ISBN } }): Books => {
       return (
-        <li>
+        <li class="relative">
           <BookItem title={title} cover={cover} ISBN={ISBN} />
         </li>
       );

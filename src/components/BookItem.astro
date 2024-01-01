@@ -1,4 +1,5 @@
 ---
+import AddToList from "./AddToList";
 export interface Props {
   title: string;
   cover: string;
@@ -9,7 +10,7 @@ const { title, cover, ISBN } = Astro.props;
 
 <a
   href="#"
-  class="h-full hover:scale-105 inline-block transition-[transform] hover:contrast-125 hover:shadow-2xl"
+  class="h-full w-full hover:scale-105 inline-block transition-[transform] hover:contrast-125 hover:shadow-2xl"
 >
   <img
     class="aspect-[150/200] h-full objet-cover w-full max-w-full rounded"
@@ -17,3 +18,5 @@ const { title, cover, ISBN } = Astro.props;
     alt="clena code"
   />
 </a>
+
+<AddToList client:visible cover={cover} title={title} ISBN={ISBN} />
