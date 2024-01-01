@@ -1,0 +1,19 @@
+---
+export interface Props {
+  title: string;
+  cover: string;
+  ISBN: string;
+}
+const { title, cover, ISBN } = Astro.props;
+---
+
+<a
+  href="#"
+  class="h-full hover:scale-105 inline-block transition-[transform] hover:contrast-125 hover:shadow-2xl"
+>
+  <img
+    class="aspect-[150/200] h-full objet-cover w-full max-w-full rounded"
+    src={cover}
+    alt="clena code"
+  />
+</a>
