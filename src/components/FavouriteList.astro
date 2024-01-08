@@ -1,0 +1,19 @@
+---
+import { favouritesBooks } from "../context/BooksListContext";
+import { useStore } from "@nanostores/preact";
+import BookItem from "./BookItem.tsx";
+
+const $favouritesBooks = useStore(favouritesBooks);
+console.log($favouritesBooks);
+---
+
+<ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+  {
+    $favouritesBooks.map(({ title, cover, ISBN }: any) => (
+      <li>
+        <BookItem title={title} cover={cover} ISBN={ISBN} />
+      </li>
+    ))
+  }
+</ul>
+./BookItem.tsx
