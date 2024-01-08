@@ -19,4 +19,4 @@ const { title, cover, ISBN } = Astro.props;
   />
 </a>
 
-<AddToList client:visible cover={cover} title={title} ISBN={ISBN} />
+<AddToList client:only cover={cover} title={title} ISBN={ISBN} />
