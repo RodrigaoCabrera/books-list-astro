@@ -14,7 +14,6 @@ export function handlerFavouritesBooks(book) {
     localStorage.setItem("favBooks", JSON.stringify(newFavBooks));
   } else {
     favouritesBooks.set([...items, book]);
-    console.log(favouritesBooks);
 
     localStorage.setItem("favBooks", JSON.stringify([...items, book]));
   }
