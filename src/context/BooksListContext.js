@@ -1,20 +1,14 @@
-import { map } from "nanostores";
+import { atom, map } from "nanostores";
+import books from "../data/books.json";
+export const booksLibrary = atom(books.library);
 
-const localStorageData = window.localStorage.getItem("favBooks");
-export const favouritesBooks = localStorageData
-  ? map(JSON.parse(localStorageData))
-  : map([]);
+export const filterForGenre = (genre) => {
+  booksLibrary.set(books.library);
+  const allBooks = booksLibrary.get();
+  const booksSelected = allBooks.filter(({ book }) => book.genre === genre);
+  console.log(booksSelected);
 
-export function handlerFavouritesBooks(book) {
-  const items = favouritesBooks.get();
-  const isAdded = items?.some((favBook) => favBook.id === book.id);
-  if (isAdded) {
-    const newFavBooks = items.filter((favBook) => favBook.id !== book.id);
-    favouritesBooks.set(newFavBooks);
-    localStorage.setItem("favBooks", JSON.stringify(newFavBooks));
-  } else {
-    favouritesBooks.set([...items, book]);
+  booksLibrary.set(booksSelected);
+};
 
-    localStorage.setItem("favBooks", JSON.stringify([...items, book]));
-  }
-}
+export const removeFilters = () => booksLibrary.set(books.library);

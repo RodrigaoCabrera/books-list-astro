@@ -1,7 +1,7 @@
 // Drawer.js
 import { h } from "preact";
 import { useStore } from "@nanostores/preact";
-import { favouritesBooks } from "../context/BooksListContext";
+import { favouritesBooks } from "../context/LocalStorageContext.js";
 import BookItem from "./BookItem.tsx";
 import BooksQuantity from "./BooksQuantity";
 

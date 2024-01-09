@@ -1,5 +1,5 @@
 import { useStore } from "@nanostores/preact";
-import { favouritesBooks } from "../context/BooksListContext";
+import { favouritesBooks } from "../context/LocalStorageContext";
 
 const BooksQuantity = () => {
   const $favouritesBooks = useStore(favouritesBooks);

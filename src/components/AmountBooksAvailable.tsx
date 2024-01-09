@@ -1,6 +1,6 @@
 import books from "../data/books.json";
 
-import { favouritesBooks } from "../context/BooksListContext";
+import { favouritesBooks } from "../context/LocalStorageContext";
 import { useStore } from "@nanostores/preact";
 const AmountBooksAvailable = () => {
   const $favouritesBooks = useStore(favouritesBooks);

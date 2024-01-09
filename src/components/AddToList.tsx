@@ -4,7 +4,7 @@ import MarkerOutline from "./icons/MarkerOutline.tsx";
 import {
   handlerFavouritesBooks,
   favouritesBooks,
-} from "../context/BooksListContext";
+} from "../context/LocalStorageContext.js";
 import { useStore } from "@nanostores/preact";
 interface Props {
   ISBN: string;

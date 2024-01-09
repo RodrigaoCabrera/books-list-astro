@@ -1,8 +1,9 @@
 ---
 import AmountBooksAvailable from "../components/AmountBooksAvailable";
-import BooksContainer from "../components/BooksContainer.astro";
+import BooksContainer from "../components/BooksContainer.tsx";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
+import GenreFilter from "../components/GenreFilter";
 ---
 
 <Layout title="Books list">
@@ -11,8 +12,9 @@ import Layout from "../layouts/Layout.astro";
     <section>
       <div>
         <AmountBooksAvailable client:only />
+        <GenreFilter client:visible />
       </div>
-      <BooksContainer />
+      <BooksContainer client:only />
     </section>
   </main>
 </Layout>

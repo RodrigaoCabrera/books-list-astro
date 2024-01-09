@@ -2,6 +2,9 @@
 import Drawer from "./Drawer";
 ---
 
-<header class="w-[1120px] mx-auto flex justify-end py-4">
-  <Drawer client:only />
+<header class="w-[1120px] mx-auto flex justify-between py-4">
+  <h1 class="text-5xl uppercase text-white">Lista de libros</h1>
+  <div>
+    <Drawer client:only />
+  </div>
 </header>

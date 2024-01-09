@@ -1,5 +1,5 @@
 ---
-import { favouritesBooks } from "../context/BooksListContext";
+import { favouritesBooks } from "../context/LocalStorageContext.js";
 import { useStore } from "@nanostores/preact";
 import BookItem from "./BookItem.tsx";
 
@@ -15,4 +15,4 @@ const $favouritesBooks = useStore(favouritesBooks);
     ))
   }
 </ul>
-./BookItem.tsx
+./BookItem.tsx ../context/LoaclStorageContext.js ../context/LocalStorageContext.js
