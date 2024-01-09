@@ -1,4 +1,5 @@
 ---
+import AmountBooksAvailable from "../components/AmountBooksAvailable";
 import BooksContainer from "../components/BooksContainer.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
@@ -7,9 +8,10 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Books list">
   <Header />
   <main class="w-[1120px] mx-auto">
-    <h1 class="text-5xl uppercase text-white">Lista de libros</h1>
-
     <section>
+      <div>
+        <AmountBooksAvailable client:only />
+      </div>
       <BooksContainer />
     </section>
   </main>
