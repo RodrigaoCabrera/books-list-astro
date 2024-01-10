@@ -6,7 +6,6 @@ export const filterForGenre = (genre) => {
   booksLibrary.set(books.library);
   const allBooks = booksLibrary.get();
   const booksSelected = allBooks.filter(({ book }) => book.genre === genre);
-  console.log(booksSelected);
 
   booksLibrary.set(booksSelected);
 };

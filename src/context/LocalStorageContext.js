@@ -18,3 +18,14 @@ export function handlerFavouritesBooks(book) {
     localStorage.setItem("favBooks", JSON.stringify([...items, book]));
   }
 }
+
+window.addEventListener(
+  "storage",
+  (event) => {
+    if (event.key === "favBooks") {
+      const localStorageData = window.localStorage.getItem("favBooks");
+      favouritesBooks.set(JSON.parse(localStorageData));
+    }
+  },
+  []
+);
